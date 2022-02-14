@@ -27,6 +27,7 @@ class AddComment extends Component {
                 alert('Comment was sent!')
             } else {
                 console.log('error')
+                console.log(response)
                 alert('something went wrong')
             }
         } catch (error) {

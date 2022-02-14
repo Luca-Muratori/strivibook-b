@@ -5,7 +5,6 @@ import Loading from './Loading'
 import Error from './Error'
 
 class CommentArea extends Component {
-
     state = {
         comments: [], // comments will go here
         isLoading: true,
@@ -30,6 +29,12 @@ class CommentArea extends Component {
         } catch (error) {
             console.log(error)
             this.setState({ isLoading: false, isError: true })
+        }
+    }
+    //added 14-02
+    componentDidUpdate= async (previousProp, previousState)=>{
+        if(previousProp.comment !== this.props.title){
+            console.log('comment has changed')
         }
     }
 

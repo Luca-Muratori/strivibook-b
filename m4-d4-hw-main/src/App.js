@@ -6,6 +6,7 @@ import SingleBook from './components/SingleBook'
 import BookList from './components/BookList'
 import fantasyBooks from './fantasyBooks.json'
 import CommentArea from './components/CommentArea'
+import { Container, Row, Col } from 'react-bootstrap'
 
 function App() {
   return (
@@ -16,8 +17,12 @@ function App() {
             {/* <WarningSign text="Watch out again!" /> */}
             {/* <MyBadge text="NEW!!" color="info" /> */}
             {/* <SingleBook book={fantasyBooks[0]} /> */}
-            <BookList books={fantasyBooks} />
-            <CommentArea/>
+             <Col xs={9} lg={6}>
+              <BookList books={fantasyBooks} />
+            </Col>
+            <Col xs={3} lg={6}>
+              <CommentArea />
+            </Col>
           </Row>
         </Container>
 
